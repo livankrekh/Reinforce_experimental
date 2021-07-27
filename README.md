@@ -11,4 +11,4 @@ Own researches in reinforcement learning using openai-gym.
 ### Bipedal Walker
 ![marvin1](gifs/marvin1.gif)
 ![marvin2](gifs/marvin2.gif)
-![marvin3](gifs/marvin2.gif)
+![marvin3](gifs/marvin3.gif)
