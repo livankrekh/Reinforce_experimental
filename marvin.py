@@ -1,16 +1,16 @@
+#!./venv/bin/python3.7
+
 import gym
 import torch
 import numpy as np
 
-<<<<<<< HEAD
 from torch import nn
 from torch.distributions.normal import Normal
 
 import torch.nn.functional as funcs
 from tqdm import tqdm
 
-env = gym.make('BipedalWalkerHardcore-v2')
-# env = gym.make('MountainCarContinuous-v0')
+env = gym.make('Marvin-v0')
 env._max_episode_steps = 5000
 env.reset()
 

@@ -9,7 +9,6 @@ import torch.nn.functional as funcs
 from tqdm import tqdm
 
 env = gym.make('BipedalWalkerHardcore-v3')
-# env = gym.make('MountainCarContinuous-v0')
 
 env._max_episode_steps = 5000
 gym.logger.set_level(40)
@@ -136,7 +135,6 @@ if __name__ == "__main__":
 	policy_nn = PolicyNetwork(input_size=state_size, n_actions=actions_size, random_state=RANDOM_STATE)
 
 	for i_episode in tqdm(range(n_training_episodes)):
-	# for i_episode in range(n_training_episodes):
 		observation = env.reset()
 		done = False
 
@@ -146,7 +144,6 @@ if __name__ == "__main__":
 		new_observations = []
 
 		while not done:
-			# env.render()
 			observation = np.array(observation)
 			random_action = np.random.uniform(low=-1., high=1., size=(4,))
 
@@ -157,8 +154,6 @@ if __name__ == "__main__":
 
 			new_observations.append(observation)
 			rewards.append(reward)
-
-		# print("Total reward =", np.mean(rewards))
 
 		policy_nn.train(np.array(actions), np.array(observations), np.array(rewards), np.array(new_observations), epochs=2)
 

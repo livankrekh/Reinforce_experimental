@@ -124,8 +124,6 @@ def simulation(network, n):
 			action = network.predict(observation).detach().numpy().reshape((1,))
 			observation, reward, done, info = env.step(action)
 
-			print(action)
-
 if __name__ == "__main__":
 	state_size = 2
 	actions_size = 1

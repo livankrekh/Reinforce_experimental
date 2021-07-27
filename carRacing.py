@@ -9,7 +9,6 @@ import torch.nn.functional as funcs
 from tqdm import tqdm
 
 env = gym.make('CarRacing-v0')
-# env = gym.make('MountainCarContinuous-v0')
 
 env._max_episode_steps = 1000
 gym.logger.set_level(40)
